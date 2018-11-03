@@ -1,12 +1,13 @@
 import React, { Component } from "react";
+import { headers } from './Header.module.scss';
 
 class Header extends Component {
   render() {
     return (
-      <header className="App-header">
+      <header className={headers}>
         <h1 className="App-title">React Counters</h1>
-        <button>+</button>
-        <button>-</button>
+        <button onClick={this.props.decrease}>-</button>
+        <button onClick={this.props.increase}>+</button>
       </header>
     );
   }
